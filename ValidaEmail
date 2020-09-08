@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Valida Email</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <form id="form1" name="form1" method="post" action="#" onsubmit="return valida_form(this)">
+        <label for="email"></label>
+        <input name="email" type="text" id="email" size="35" />
+        </form>
+
+        <script type="text/javascript" language="javascript">
+            function valida_form (){
+            var filter = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+            if(!filter.test(document.getElementById("email").value)){
+            alert('Por favor, digite o email corretamente');
+            document.getElementById("email").focus();
+            return false
+            }
+            }
+            </script>
+</body>
+</html>
