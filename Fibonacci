@@ -1,0 +1,22 @@
+<?php
+function fibonacci($fib)
+{
+
+	$valor1=0;
+	$valor2=1;
+	$valor3=1;
+	for ($cont=0; $cont <= $fib; $cont++)
+	{
+		if($cont <=1) {
+		$valor3 = $cont;
+	}
+	else
+	{
+		$valor3 = $valor1 + $valor2;
+		$valor1 = $valor2;
+		$valor2 = $valor3;
+	} $res = $valor3+$valor1;
+
+    echo "$res <br><br>";
+	}
+} fibonacci (15);
